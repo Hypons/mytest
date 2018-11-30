@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 指定当前映射文件是针对哪个接口的映射； 注意：要指定包名和类名-->
+ <mapper namespace="com.itheima.dao.IUserDao">
+    <!--
+    select 表示执行查询操作
+        id 对应namespace中接口的方法名称
+        resultType 指定方法的返回值类型。
+                   如果方法返回的是集合，只需要指定集合中元素的类型即可。
+        标签体中，指定sql语句。
+    -->
+    <select id="findAll" resultType="com.itheima.entity.User">
+        select * from user
+    </select>
+</mapper>
